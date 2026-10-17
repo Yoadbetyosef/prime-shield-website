@@ -931,11 +931,33 @@ table.cmp td.acc{color:#fff;font-weight:400}
  .pd-l{padding:26px 22px 6px;justify-content:flex-start}.pd-l .pd-brand{margin-bottom:12px;font-size:9px}.pd-h{font-size:34px}.pd-sub{display:none}
  .pd-r{padding:12px 22px 24px}.pd-r .pd-brand{display:none}.pd-scene{animation:none}.pd-tabs{margin-bottom:12px}.pd-tabs span{font-size:9px;padding:8px 0}
  .pd-scene h4{font-size:20px}.pd-scene p{font-size:11px;margin:6px 0 10px}.pd-card{padding:10px 14px;margin-bottom:6px;border-radius:12px}.pd-card b{font-size:15px}.pd-card small{font-size:10px}.pd-cta{padding:12px;font-size:10px}}
+/* ===== MOBILE: top trust strip + rotating trust row (desktop: hidden) ===== */
+.tstrip,.trot{display:none}
+@media(max-width:767px){
+ .tstrip{display:block;position:fixed;top:0;left:0;right:0;z-index:61;overflow:hidden;white-space:nowrap;background:var(--lime);color:#111;font-size:10px;letter-spacing:.18em;font-weight:700;padding:7px 0;font-family:'Helvetica Neue ME','Helvetica Neue',sans-serif}
+ .tstrip-track{display:inline-block;animation:tstrip 26s linear infinite;will-change:transform}
+ @keyframes tstrip{to{transform:translateX(-50%)}}
+ nav.top,nav.top.dark,nav.top.dark.lime{top:36px!important}
+ .hslides{inset:102px 14px auto 14px!important;height:46%!important}
+ .heroc .title{top:calc(102px + 46%)!important}
+ .heroc .bottom{top:calc(102px + 46% + 18px)!important}
+ .heroc .brcard{position:relative}
+ .heroc .brcard .proof{transition:opacity .45s,transform .45s}
+ .heroc .brcard .proof.off{opacity:0;transform:translateY(-6px);pointer-events:none}
+ .trot{display:block;position:absolute;left:0;right:0;top:12px;height:47px;pointer-events:none}
+ .trot .ts{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s;color:#fff}
+ .trot .ts.on{opacity:1;transform:none}
+ .trot .aw b{display:block;font-size:17px;letter-spacing:.06em;color:#F2C94C;font-weight:900;line-height:1}
+ .trot .aw b::before{content:"★ ";font-size:14px}
+ .trot .aw small,.trot .qt small{display:block;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-top:5px;text-transform:uppercase}
+ .trot .qt b{display:block;font-size:14px;font-weight:600;line-height:1.25;font-style:italic;padding:0 6px}
+}
 </style>
 </head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
+<div class="tstrip" aria-hidden="true"><div class="tstrip-track">SERVING ALL 50 STATES &nbsp;✦&nbsp; BEST CHOICE 2026 &nbsp;✦&nbsp; MOST TRUSTED HOME WARRANTY &nbsp;✦&nbsp; 5,000+ FIVE-STAR REVIEWS &nbsp;✦&nbsp; LICENSED &amp; INSURED PROS &nbsp;✦&nbsp; COAST TO COAST &nbsp;✦&nbsp; SERVING ALL 50 STATES &nbsp;✦&nbsp; BEST CHOICE 2026 &nbsp;✦&nbsp; MOST TRUSTED HOME WARRANTY &nbsp;✦&nbsp; 5,000+ FIVE-STAR REVIEWS &nbsp;✦&nbsp; LICENSED &amp; INSURED PROS &nbsp;✦&nbsp; COAST TO COAST &nbsp;✦&nbsp; </div></div>
 <nav class="top">
   <a class="t brand" href="#top">PRIME SHIELD HOME WARRANTY <span>©</span></a>
   <div class="t c a"><div>HOME WARRANTY</div><div>FOR AMERICAN HOMES</div></div>
@@ -995,6 +1017,13 @@ table.cmp td.acc{color:#fff;font-weight:400}
           </div>
           <div class="live" aria-hidden="true"><span class="jf"><span class="dot"></span>Service request</span><div class="win" id="liveWin"><div class="line"></div></div></div></div>
         <div class="brcard"><div class="proof" aria-label="Customer rating"><div class="faces"><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183048_71f4d131-8500-4636-92f3-a1193d356bc4.png)"></span><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183132_ebf96998-55ea-4b71-9ffa-9c9619dd4ddf.png)"></span><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183202_3b7133cb-748f-4603-8637-add3b1225236.png)"></span><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183252_03051d60-7cbd-4154-9075-a39d99c915c4.png)"></span></div><div><div class="row"><b>4.9</b><span class="st"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span></div><small>5,000+ reviews</small><div class="pq win" id="quoteWin"><div class="line"></div></div></div></div>
+        <div class="trot" aria-hidden="true">
+          <div class="ts aw"><div><b>BEST CHOICE 2026</b><small>Home warranty · all 50 states</small></div></div>
+          <div class="ts qt"><div><b>“They replaced my water heater in one day.”</b><small>Verified homeowner · Edison, NJ</small></div></div>
+          <div class="ts aw"><div><b>MOST TRUSTED COMPANY</b><small>to work with · 2026</small></div></div>
+          <div class="ts qt"><div><b>“One call. One fee. Done.”</b><small>Verified homeowner · Tampa, FL</small></div></div>
+          <div class="ts aw"><div><b>5,000+ FIVE-STAR REVIEWS</b><small>Rated 4.9 by real homeowners</small></div></div>
+        </div>
         <div class="apps" aria-label="Get the Prime Shield app">
           <a class="store" href="#" aria-label="Download on the App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.8-1.7 0-3.2 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.9-4.1zM14 5.2c.7-.8 1.1-2 1-3.2-1 0-2.2.7-2.9 1.5-.7.7-1.2 1.9-1.1 3 1.1.1 2.3-.5 3-1.3z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
           <a class="store" href="#" aria-label="Get it on Google Play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17l9.5-8.5L4 3.5zm11 7.4 2.6-1.5c.9-.5.9-1.3 0-1.8L6.3 2.6 15 10.9zm0 2.2L6.3 21.4l11.3-5c.9-.5.9-1.3 0-1.8L15 13.1z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
@@ -1534,6 +1563,14 @@ function stop(){running=false;clearTimeout(timer)}
 var hero=document.getElementById('hero');
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)start();else stop()})},{threshold:.2}).observe(hero)}else start();
 document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else if(hero.getBoundingClientRect().bottom>0)start()});
+})();
+</script>
+<script>
+(function(){var pr=document.querySelector('.heroc .brcard .proof'),tr=document.querySelector('.trot');if(!pr||!tr)return;
+var mob=matchMedia('(max-width:767px)');if(!mob.matches)return;
+var ts=tr.querySelectorAll('.ts'),k=-1,showProof=true;
+setInterval(function(){if(showProof){/* proof is up -> show next card */k=(k+1)%ts.length;pr.classList.add('off');ts[k].classList.add('on');showProof=false}
+ else{ts[k].classList.remove('on');pr.classList.remove('off');showProof=true}},3000);
 })();
 </script>
 </body>
