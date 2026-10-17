@@ -164,6 +164,15 @@ nav.top .navcta:hover,nav.top.dark .navcta:hover{background:var(--mkd);color:#ff
 .heroc .brcard .proof .pq{display:none}
 .heroc .brcard .cta{flex-direction:row;flex-wrap:nowrap;align-items:center;gap:10px}
 .heroc .brcard .cta small{display:none}
+/* app store buttons stacked inside the bar (option B) */
+.heroc .brcard .apps{display:flex;flex-direction:column;gap:6px;border-left:1px solid rgba(255,255,255,.18);padding-left:18px}
+.heroc .brcard .store{display:inline-flex;align-items:center;gap:8px;background:#000;color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:9px;padding:6px 12px 6px 9px;line-height:1.05;white-space:nowrap;text-shadow:none}
+.heroc .brcard .store:hover{border-color:var(--lime)}
+.heroc .brcard .store svg{width:18px;height:18px;flex:none}
+.heroc .brcard .store small{display:block;font-size:8px;letter-spacing:.06em;opacity:.8;text-transform:uppercase;color:#fff}
+.heroc .brcard .store b{font-size:12px;font-weight:600;color:#fff}
+@media(max-width:1600px) and (min-width:768px){.heroc .brcard .apps{padding-left:12px}.heroc .brcard .store span{display:none}.heroc .brcard .store{padding:7px 8px;border-radius:50%}}
+@media(max-width:767px){.heroc .brcard .apps{flex-direction:row;justify-content:center;border-left:0;padding-left:0;gap:10px;width:100%}.heroc .brcard .store{flex:1;justify-content:center}}
 @media(max-width:1439px) and (min-width:768px){.heroc .brcard{gap:14px;padding:10px 10px 10px 16px}.heroc .brcard .proof .faces img{width:28px;height:28px}.heroc .brcard .cta .pill{padding:13px 16px;font-size:10px}}
 @media(max-width:1100px) and (min-width:768px){.heroc .brcard .proof .faces{display:none}}
 @media(max-width:1279px) and (min-width:768px){.heroc .brcard{margin-left:auto}}
@@ -695,7 +704,21 @@ table.cmp td.acc{color:#fff;font-weight:400}
 /* ===== phone fixes: no grey flash, no white strip, smooth scroll ===== */
 .first video{background:transparent!important}
 #cv{background:transparent}
-.hero .pin{background:#F2F1F4 url("https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261008_014001_461fe4aa-f5a2-4e87-a850-607638423947.png") center/cover no-repeat} /* round 6 option 4: frosted glass house with dome shield, light studio */
+/* ---- hero story slides ---- */
+.hslides{position:absolute;inset:0;z-index:0}
+.hs{position:absolute;inset:0;background:#5B21B6 center/cover no-repeat;opacity:0;transition:opacity 1.4s ease;transform:scale(1.04);transition-property:opacity,transform;transition-duration:1.4s,6s}
+.hs.on{opacity:1;transform:scale(1)}
+.heroc h1 small,.heroc h1 #heroWord{display:block;transition:opacity .5s ease,transform .5s ease}
+.heroc h1.sw small,.heroc h1.sw #heroWord{opacity:0;transform:translateY(14px)}
+.hdots{position:absolute;left:50%;bottom:max(16px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;gap:8px;z-index:12}
+.hdots i{width:26px;height:3px;border-radius:2px;background:rgba(255,255,255,.3);overflow:hidden;position:relative}
+.hdots i::after{content:"";position:absolute;inset:0;background:var(--lime);transform:scaleX(0);transform-origin:left}
+.hdots i.on::after{animation:hdot 5s linear forwards}
+@keyframes hdot{to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.hs{transition:none;transform:none}.hdots i.on::after{animation:none;transform:scaleX(1)}}
+@media(max-width:767px){.hdots{bottom:max(6px,env(safe-area-inset-bottom,0px))}.hdots i{width:18px;height:2px}}
+.hero .pin{background:#5B21B6 url("https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_004542_7c9f7b26-c19a-49f4-9fdd-7d354a3cb062.png") center/cover no-repeat} /* round 5 option 3: appliances floating on purple */
+@media(max-width:767px),(orientation:portrait) and (max-width:1024px){.hero .pin{background-image:url("https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_005104_d23d1886-5929-4796-a6f3-83c7b8e26e96.png");background-position:center bottom}} /* 9:16 version for phones and portrait tablets */
 @media(max-width:767px){
  .hero .pin{height:100vh;height:100lvh;background-position:24% center}
  .heroc{padding-bottom:calc(22px + (100lvh - 100svh))!important}
@@ -768,7 +791,7 @@ table.cmp td.acc{color:#fff;font-weight:400}
 .ind .l span{color:rgba(17,17,17,.7)}
 .person .box{background:linear-gradient(160deg,#EDE9FE,#C4B5FD);min-height:260px;overflow:hidden}.person .box img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 .vdim{background:none!important}
-.scrim{background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0) 60%,rgba(255,255,255,.45) 100%)!important}
+.scrim{background:linear-gradient(180deg,rgba(30,11,75,.35) 0%,rgba(30,11,75,0) 30%,rgba(30,11,75,0) 60%,rgba(30,11,75,.5) 100%)!important}
 .film .slot .play svg path{fill:#fff}
 .worry .wq{background:#F7F5FC;border-color:rgba(109,40,217,.14)}
 .indorb .pill{background:#F7F5FC;border-color:rgba(109,40,217,.14)}
@@ -789,18 +812,19 @@ table.cmp td.acc{color:#fff;font-weight:400}
 @media(max-width:1439px) and (min-width:768px){.heroc .brcard .proof .faces .fav{width:40px;height:40px}}
 .indorb .av{overflow:hidden}
 .indorb .av img{transform:scale(1.4);transform-origin:50% 28%}
-/* hero text over the light studio image: dark, Apple style */
-.heroc h1{color:#111;text-shadow:0 2px 30px rgba(255,255,255,.6)}
-.heroc h1 small{color:var(--mk)}
-.heroc .claims .ci b,.heroc .cap .live .amt,.heroc .proof,.heroc .proof .row b{color:#111;text-shadow:0 1px 14px rgba(255,255,255,.6)}
-.heroc .claims .ci span,.heroc .cap .live .tg,.heroc .proof small,.heroc .cta small,.heroc .mu{color:rgba(17,17,17,.62);text-shadow:0 1px 10px rgba(255,255,255,.6)}
-.heroc .cap .live .tg em{color:var(--mk)}
-.heroc .proof .pq{color:rgba(17,17,17,.85)}
-.heroc .brcard{background:rgba(255,255,255,.72);border-color:rgba(17,17,17,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.heroc .cap .live .jf{border-color:var(--mk)}.heroc .cap .live .jf .dot{background:var(--mk)}
-.heroc .pill.o{border-color:rgba(17,17,17,.4);color:#111}
-.heroc .pill.o:hover{border-color:#111;background:rgba(17,17,17,.06)}
-.heroc .proof .faces .fav{border-color:#fff}
+/* hero text over the purple product image: white, lime small line */
+.heroc h1{color:#fff;text-shadow:0 4px 40px rgba(0,0,0,.35)}
+.heroc h1 small{color:var(--lime)}
+.heroc .claims .ci b,.heroc .cap .live .amt,.heroc .proof,.heroc .proof .row b{color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.heroc .claims .ci span,.heroc .cap .live .tg,.heroc .proof small,.heroc .cta small,.heroc .mu{color:rgba(255,255,255,.78);text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.heroc .cap .live .tg em{color:var(--lime)}
+.heroc .proof .pq{color:rgba(255,255,255,.9)}
+.heroc .brcard{background:rgba(20,6,55,.55);border-color:rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.heroc .cap .live .jf{border-color:var(--lime)}.heroc .cap .live .jf .dot{background:var(--lime)}
+.heroc .claims .ci::before{background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2l2.3 2.3 4.7-4.9' fill='none' stroke='%23111' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.heroc .pill.o{border-color:rgba(255,255,255,.65);color:#fff}
+.heroc .pill.o:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.heroc .proof .faces .fav{border-color:#2A0F5E}
 /* bigger rating line + CTAs in the hero bar */
 @media(min-width:1440px){.heroc .brcard .proof small{font-size:12px;letter-spacing:.14em;margin-top:6px}.heroc .brcard .proof b{font-size:22px}.heroc .brcard .cta .pill{font-size:13px;padding:18px 28px}}
 @media(max-width:1439px) and (min-width:768px){.heroc .brcard .proof small{font-size:11px}.heroc .brcard .cta .pill{padding:15px 20px!important;font-size:11px!important}}
@@ -895,6 +919,14 @@ table.cmp td.acc{color:#fff;font-weight:400}
     <div class="first" id="first">
       <!-- HERO VIDEO SLOT: add poster="hero.jpg" src="hero.mp4" (scroll-scrubbed, 5–8s, 1920×1080, no text) -->
       <!-- hero is a still image for now (glass house + dome). Previous scroll video: hf_20261007_232124_9f81feb4.mp4 — re-add poster/src here when a matching video exists -->
+      <!-- HERO STORY: rotating background + headline, 5s per slide -->
+      <div class="hslides" id="hslides" aria-hidden="true">
+        <div class="hs on" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_004542_7c9f7b26-c19a-49f4-9fdd-7d354a3cb062.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_005104_d23d1886-5929-4796-a6f3-83c7b8e26e96.png"></div>
+        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_003708_a2385a95-19c8-4485-a838-1d20da3edc04.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010643_1d817ae8-3e50-41db-b89f-e6d7ad9a3a8a.png"></div>
+        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_003713_7f6adeff-b0c7-4ced-bf44-5829ccb7fbd9.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010648_bb5fd37c-4705-43c5-a9e9-f4a8038a9046.png"></div>
+        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_003653_12be6f45-08ba-4c0c-899b-5b8e201528f6.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010653_d853b747-d35f-4481-b2a8-a5e50a5a3285.png"></div>
+        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_005954_1985811a-f028-4ef2-8725-c1b5d3231ac5.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010700_004cdab9-fff5-4efc-9479-6e26376a197e.png"></div>
+      </div>
       <video id="v1" muted playsinline preload="auto" crossorigin="anonymous"></video>
       <canvas id="cv" width="1280" height="720"></canvas>
 
@@ -902,7 +934,7 @@ table.cmp td.acc{color:#fff;font-weight:400}
 
       <!-- 1 / HERO -->
       <div class="heroc" id="heroc">
-        <div class="title"><h1 class="hn"><small>Your home.</small>Covered.</h1></div>
+        <div class="title"><h1 class="hn" id="heroH1"><small id="heroSmall">Your home.</small><span id="heroWord">Covered.</span></h1></div>
         <div class="bottom"><div class="cap"><div class="claims">
             <div class="ci"><b>24/7 service</b><span>Every day of the year</span></div>
             <div class="ci"><b>Vetted pros</b><span>Licensed and insured</span></div>
@@ -910,6 +942,10 @@ table.cmp td.acc{color:#fff;font-weight:400}
           </div>
           <div class="live" aria-hidden="true"><span class="jf"><span class="dot"></span>Service request</span><div class="win" id="liveWin"><div class="line"></div></div></div></div>
         <div class="brcard"><div class="proof" aria-label="Customer rating"><div class="faces"><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183048_71f4d131-8500-4636-92f3-a1193d356bc4.png)"></span><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183132_ebf96998-55ea-4b71-9ffa-9c9619dd4ddf.png)"></span><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183202_3b7133cb-748f-4603-8637-add3b1225236.png)"></span><span class="fav" style="background-image:url(https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261007_183252_03051d60-7cbd-4154-9075-a39d99c915c4.png)"></span></div><div><div class="row"><b>4.9</b><span class="st"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></svg></span></div><small>5,000+ reviews</small><div class="pq win" id="quoteWin"><div class="line"></div></div></div></div>
+        <div class="apps" aria-label="Get the Prime Shield app">
+          <a class="store" href="#" aria-label="Download on the App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.8-1.7 0-3.2 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8 2.2-1.3 3.1-2.5c1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.9-4.1zM14 5.2c.7-.8 1.1-2 1-3.2-1 0-2.2.7-2.9 1.5-.7.7-1.2 1.9-1.1 3 1.1.1 2.3-.5 3-1.3z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="store" href="#" aria-label="Get it on Google Play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5v17l9.5-8.5L4 3.5zm11 7.4 2.6-1.5c.9-.5.9-1.3 0-1.8L6.3 2.6 15 10.9zm0 2.2L6.3 21.4l11.3-5c.9-.5.9-1.3 0-1.8L15 13.1z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+        </div>
         <div class="cta">
           <a class="pill b" href="#apply">Get a Free Quote</a>
           <a class="pill o" href="#contact">Submit a Claim</a>
@@ -1426,6 +1462,25 @@ function play(k){i=k;tabs.forEach(function(t,n){t.classList.toggle('on',n===k)})
 function start(){if(running)return;running=true;play(0)}function stop(){running=false;clearTimeout(timer);cur.style.opacity='0'}
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)start();else stop()})},{threshold:.35}).observe(root)}else start();
 document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else if(root.getBoundingClientRect().top<innerHeight)start()});
+})();
+</script>
+<script>
+/* hero story: rotate background + headline every 5s while the hero is on screen */
+(function(){var wrap=document.getElementById('hslides'),h1=document.getElementById('heroH1');if(!wrap||!h1)return;
+var slides=wrap.querySelectorAll('.hs'),sm=document.getElementById('heroSmall'),wd=document.getElementById('heroWord');
+var COPY=[['Your home.','Covered.'],['The things you rely on.','Protected.'],['When something breaks.','One call.'],['Every day. Every hour.','We answer.'],['Coast to coast.','All of America.']];
+var mobile=matchMedia('(max-width:767px),(orientation:portrait) and (max-width:1024px)').matches;
+slides.forEach(function(s){var m=s.getAttribute('data-m');if(mobile&&m){s.style.backgroundImage='url("'+m+'")';s.style.backgroundPosition='center bottom'}});
+var dots=document.createElement('div');dots.className='hdots';slides.forEach(function(){dots.appendChild(document.createElement('i'))});document.getElementById('first').appendChild(dots);
+var i=0,timer=null,running=false,DUR=5000;
+function show(k){i=k;slides.forEach(function(s,n){s.classList.toggle('on',n===k)});dots.querySelectorAll('i').forEach(function(d,n){d.classList.remove('on');void d.offsetWidth;if(n===k)d.classList.add('on')});
+ h1.classList.add('sw');setTimeout(function(){sm.textContent=COPY[k][0];wd.textContent=COPY[k][1];var L=COPY[k][1].length;wd.style.fontSize=L>8?(Math.round(800/L))+'%':'';h1.classList.remove('sw')},500)}
+function next(){show((i+1)%slides.length);timer=setTimeout(next,DUR)}
+function start(){if(running)return;running=true;dots.querySelectorAll('i')[i].classList.add('on');timer=setTimeout(next,DUR)}
+function stop(){running=false;clearTimeout(timer)}
+var hero=document.getElementById('hero');
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)start();else stop()})},{threshold:.2}).observe(hero)}else start();
+document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else if(hero.getBoundingClientRect().bottom>0)start()});
 })();
 </script>
 </body>
