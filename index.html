@@ -934,13 +934,14 @@ table.cmp td.acc{color:#fff;font-weight:400}
 /* ===== MOBILE: top trust strip + rotating trust row (desktop: hidden) ===== */
 .tstrip,.trot{display:none}
 @media(max-width:767px){
- .tstrip{display:block;position:fixed;top:0;left:0;right:0;z-index:61;overflow:hidden;white-space:nowrap;background:var(--lime);color:#111;font-size:10px;letter-spacing:.18em;font-weight:700;padding:7px 0;font-family:'Helvetica Neue ME','Helvetica Neue',sans-serif}
+ .tstrip{display:block;position:fixed;top:0;left:0;right:0;z-index:61;overflow:hidden;white-space:nowrap;background:#5B21B6;color:#fff;font-size:8.5px;letter-spacing:.18em;font-weight:700;padding:6px 0 5px;border-bottom:1px solid rgba(255,255,255,.14);font-family:'Helvetica Neue ME','Helvetica Neue',sans-serif}
+ .tstrip i{font-style:normal;color:var(--lime)}
  .tstrip-track{display:inline-block;animation:tstrip 26s linear infinite;will-change:transform}
  @keyframes tstrip{to{transform:translateX(-50%)}}
- nav.top,nav.top.dark,nav.top.dark.lime{top:36px!important}
- .hslides{inset:102px 14px auto 14px!important;height:46%!important}
- .heroc .title{top:calc(102px + 46%)!important}
- .heroc .bottom{top:calc(102px + 46% + 18px)!important}
+ nav.top,nav.top.dark,nav.top.dark.lime{top:30px!important}
+ .hslides{inset:96px 14px auto 14px!important;height:46%!important}
+ .heroc .title{top:calc(96px + 46%)!important}
+ .heroc .bottom{top:calc(96px + 46% + 18px)!important}
  .heroc .brcard{position:relative}
  .heroc .brcard .proof{transition:opacity .45s,transform .45s}
  .heroc .brcard .proof.off{opacity:0;transform:translateY(-6px);pointer-events:none}
@@ -957,7 +958,7 @@ table.cmp td.acc{color:#fff;font-weight:400}
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<div class="tstrip" aria-hidden="true"><div class="tstrip-track">SERVING ALL 50 STATES &nbsp;✦&nbsp; BEST CHOICE 2026 &nbsp;✦&nbsp; MOST TRUSTED HOME WARRANTY &nbsp;✦&nbsp; 5,000+ FIVE-STAR REVIEWS &nbsp;✦&nbsp; LICENSED &amp; INSURED PROS &nbsp;✦&nbsp; COAST TO COAST &nbsp;✦&nbsp; SERVING ALL 50 STATES &nbsp;✦&nbsp; BEST CHOICE 2026 &nbsp;✦&nbsp; MOST TRUSTED HOME WARRANTY &nbsp;✦&nbsp; 5,000+ FIVE-STAR REVIEWS &nbsp;✦&nbsp; LICENSED &amp; INSURED PROS &nbsp;✦&nbsp; COAST TO COAST &nbsp;✦&nbsp; </div></div>
+<div class="tstrip" aria-hidden="true"><div class="tstrip-track">SERVING ALL 50 STATES &nbsp;<i>✦</i>&nbsp; BEST CHOICE 2026 &nbsp;<i>✦</i>&nbsp; MOST TRUSTED HOME WARRANTY &nbsp;<i>✦</i>&nbsp; 5,000+ FIVE-STAR REVIEWS &nbsp;<i>✦</i>&nbsp; LICENSED &amp; INSURED PROS &nbsp;<i>✦</i>&nbsp; COAST TO COAST &nbsp;<i>✦</i>&nbsp; SERVING ALL 50 STATES &nbsp;<i>✦</i>&nbsp; BEST CHOICE 2026 &nbsp;<i>✦</i>&nbsp; MOST TRUSTED HOME WARRANTY &nbsp;<i>✦</i>&nbsp; 5,000+ FIVE-STAR REVIEWS &nbsp;<i>✦</i>&nbsp; LICENSED &amp; INSURED PROS &nbsp;<i>✦</i>&nbsp; COAST TO COAST &nbsp;<i>✦</i>&nbsp; </div></div>
 <nav class="top">
   <a class="t brand" href="#top">PRIME SHIELD HOME WARRANTY <span>©</span></a>
   <div class="t c a"><div>HOME WARRANTY</div><div>FOR AMERICAN HOMES</div></div>
