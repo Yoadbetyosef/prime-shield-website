@@ -934,7 +934,8 @@ table.cmp td.acc{color:#fff;font-weight:400}
 /* ===== MOBILE: top trust strip + rotating trust row (desktop: hidden) ===== */
 .tstrip,.trot{display:none}
 @media(max-width:767px){
- .tstrip{display:block;position:fixed;top:0;left:0;right:0;z-index:61;overflow:hidden;white-space:nowrap;background:#5B21B6;color:#fff;font-size:8.5px;letter-spacing:.18em;font-weight:700;padding:6px 0 5px;border-bottom:1px solid rgba(255,255,255,.14);font-family:'Helvetica Neue ME','Helvetica Neue',sans-serif}
+ .tstrip{display:block;position:fixed;top:0;left:0;right:0;z-index:61;overflow:hidden;white-space:nowrap;background:#5B21B6;color:#fff;font-size:8.5px;line-height:1;height:18px;letter-spacing:.18em;font-weight:700;padding:5px 0 0;border-bottom:1px solid rgba(255,255,255,.14);font-family:'Helvetica Neue ME','Helvetica Neue',sans-serif;-webkit-text-size-adjust:none;text-size-adjust:none}
+ .tstrip-track{font-size:8.5px;line-height:1;-webkit-text-size-adjust:none;text-size-adjust:none}
  .tstrip i{font-style:normal;color:var(--lime)}
  .tstrip-track{display:inline-block;animation:tstrip 26s linear infinite;will-change:transform}
  @keyframes tstrip{to{transform:translateX(-50%)}}
