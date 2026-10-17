@@ -829,7 +829,7 @@ table.cmp td.acc{color:#fff;font-weight:400}
 /* ===== MOBILE HERO, layout A: framed photo on top (title inside), structured panel below ===== */
 @media(max-width:767px){
  .hero .pin{background:#5B21B6!important}
- .hslides{position:absolute!important;inset:auto!important;top:76px;left:14px;right:14px;height:47%;border-radius:20px;overflow:hidden;z-index:0}
+ .hslides{position:absolute!important;inset:76px 14px auto 14px!important;height:47%!important;border-radius:20px;overflow:hidden;z-index:0}
  .hs{background-position:center 60%!important}
  .hslides::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,11,75,0) 35%,rgba(30,11,75,.82) 100%);pointer-events:none}
  .scrim,.vdim{display:none!important}
@@ -846,7 +846,8 @@ table.cmp td.acc{color:#fff;font-weight:400}
  .heroc .claims .ci::before{width:17px!important;height:17px!important;background-size:10px!important}
  .heroc .cap .live{display:flex!important;align-items:center;gap:9px;margin:9px 0 0!important}
  .heroc .cap .live .jf{width:17px;height:17px;border-color:var(--lime)}.heroc .cap .live .jf .dot{background:var(--lime)}
- .heroc .cap .live .win{width:calc(100vw - 70px);max-width:none;height:18px}
+ .heroc .cap .live .win{width:calc(100vw - 70px);max-width:none;height:24px;overflow:visible}
+ .heroc .cap .live .win .line{line-height:24px}
  .heroc .cap .live .amt{font-size:14.5px!important;color:#fff!important;text-shadow:none!important}
  .heroc .cap .live .tg{font-size:9px!important;margin-left:8px;color:rgba(255,255,255,.72)!important;text-shadow:none!important}.heroc .cap .live .tg em{color:var(--lime)!important}
  .heroc .brcard{display:block!important;width:100%;background:none!important;border:0!important;border-top:1px solid rgba(255,255,255,.16)!important;border-radius:0!important;padding:14px 0 0!important;box-shadow:none!important}
