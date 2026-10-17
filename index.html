@@ -765,7 +765,7 @@ table.cmp td.acc{color:#fff;font-weight:400}
 .film .slot.playing .dur{opacity:0}
 @media(max-width:767px){
  .film{margin-top:-38vh;padding:24px 18px 80px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0,rgba(255,255,255,0) 24vh,#fff 38vh)}
- .film .top{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:26px}.film h2{font-size:13vw}.film .slot{border-radius:22px;aspect-ratio:4/3;margin:0;width:100%}.film video{object-fit:contain!important;background:#0a0a0a}.film .top p{font-size:15px}.film .play{width:76px;height:76px}.film .play svg{width:22px}.film .dur{left:16px;bottom:14px}
+ .film .top{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:26px}.film h2{font-size:13vw}.film .slot{border-radius:22px;aspect-ratio:4/3;margin:0;width:100%}.film video{object-fit:cover!important;object-position:center}.film .top p{font-size:15px}.film .play{width:76px;height:76px}.film .play svg{width:22px}.film .dur{left:16px;bottom:14px}
 }
 
 .film video{pointer-events:none}
@@ -826,33 +826,28 @@ table.cmp td.acc{color:#fff;font-weight:400}
 .heroc .brcard .pill.o:hover{border-color:#111!important;background:rgba(17,17,17,.06)!important}
 .heroc .brcard .proof .faces .fav{border-color:#fff!important}
 @media(max-width:767px){.heroc .brcard{background:none!important;border-radius:0!important;padding:0!important;box-shadow:none!important}}
-/* ===== MOBILE HERO, layout H: checklist on top, poster block bottom-left ===== */
+/* ===== MOBILE HERO, "Pure": centered title top, image, one lime button + rating line at the bottom ===== */
 @media(max-width:767px){
- .heroc{padding:110px 18px 30px!important}
+ .heroc{padding:118px 22px 36px!important}
  .heroc .bottom,.heroc .cap,.heroc .brcard{display:contents!important}
- .heroc .claims{order:1;display:flex!important;flex-direction:column!important;gap:8px!important;margin:0!important;align-items:flex-start}
- .heroc .claims .ci{display:flex!important;align-items:center;gap:10px;margin:0!important}
- .heroc .claims .ci b{font-size:17px!important;color:#fff!important;text-shadow:0 1px 12px rgba(0,0,0,.45)!important}
- .heroc .claims .ci span{display:inline!important;font-size:9px!important;letter-spacing:.14em;color:rgba(255,255,255,.8)!important;text-shadow:0 1px 10px rgba(0,0,0,.45)!important}
- .heroc .claims .ci::before{width:18px!important;height:18px!important;background-size:11px!important}
- .heroc .cap .live{display:none!important}
- .heroc .brcard .proof{order:3!important;flex-basis:auto!important;display:flex!important;align-items:center;justify-content:flex-start;gap:8px;margin:auto 0 12px!important;color:#fff!important;text-shadow:0 1px 10px rgba(0,0,0,.45)!important}
- .heroc .brcard .proof .faces .fav{width:28px!important;height:28px!important;margin-left:-9px!important;border-color:#2A0F5E!important}
- .heroc .brcard .proof>div{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+ .heroc .claims,.heroc .cap .live{display:none!important}
+ .heroc .title{order:1;flex:0 0 auto!important;display:block!important;container-type:normal!important;min-height:auto!important;text-align:center;padding:0}
+ .heroc .title h1{font-size:min(17vw,100px)!important;text-align:center;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+ .heroc .title h1 small{font-size:min(6vw,28px)!important;text-align:center;margin-bottom:6px}
+ .heroc .brcard .cta{order:3;display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin-top:auto!important;width:100%}
+ .heroc .brcard .cta .pill.b{width:100%!important;flex:none!important;padding:18px 12px!important;font-size:11px!important}
+ .heroc .brcard .cta .pill.o,.heroc .brcard .cta small{display:none!important}
+ .heroc .brcard .proof{order:4!important;flex-basis:auto!important;display:flex!important;align-items:center;justify-content:center;gap:8px;margin:14px 0 0!important;color:#fff!important;text-shadow:0 1px 10px rgba(0,0,0,.45)!important}
+ .heroc .brcard .proof .faces{display:none!important}
+ .heroc .brcard .proof>div{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
  .heroc .brcard .proof .row{display:flex;align-items:center;gap:6px}
- .heroc .brcard .proof .row b{font-size:14px!important;color:#fff!important}
+ .heroc .brcard .proof .row b{font-size:13px!important;color:#fff!important}
  .heroc .brcard .proof .st svg{width:12px!important;height:12px!important}
- .heroc .brcard .proof small{font-size:9px!important;letter-spacing:.12em;color:rgba(255,255,255,.8)!important;margin:0!important}
- .heroc .title{order:4;flex:0 0 auto!important;display:block!important;container-type:normal!important;min-height:auto!important;text-align:left;padding:0}
- .heroc .title h1{font-size:min(17vw,100px)!important;text-align:left;text-shadow:0 4px 30px rgba(0,0,0,.4)}
- .heroc .title h1 small{font-size:min(6.5vw,30px)!important;text-align:left;margin-bottom:4px}
- .heroc .brcard .cta{order:5;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;gap:14px!important;margin-top:16px!important;width:100%}
- .heroc .brcard .cta .pill.b{width:auto!important;flex:none!important;padding:15px 24px!important;font-size:11px!important}
- .heroc .brcard .cta .pill.b::after{content:" \2192"}
- .heroc .brcard .cta .pill.o{border:0!important;background:none!important;padding:0!important;width:auto!important;flex:none!important;color:#fff!important;font-size:10px!important;letter-spacing:.12em;text-decoration:underline;text-underline-offset:5px}
- .heroc .brcard .cta small{display:none!important}
- .hdots{bottom:max(8px,env(safe-area-inset-bottom,0px))}
+ .heroc .brcard .proof small{font-size:9px!important;letter-spacing:.12em;color:rgba(255,255,255,.85)!important;margin:0!important}
+ .heroc .brcard .proof small::before{content:"\00B7  ";opacity:.6}
+ .hdots{bottom:max(10px,env(safe-area-inset-bottom,0px))}
 }
+
 
 .heroc .cap .live .jf{border-color:var(--lime)}.heroc .cap .live .jf .dot{background:var(--lime)}
 .heroc .claims .ci::before{background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2l2.3 2.3 4.7-4.9' fill='none' stroke='%23111' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
