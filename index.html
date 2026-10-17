@@ -977,8 +977,8 @@ table.cmp td.acc{color:#fff;font-weight:400}
         <div class="hs on" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_004542_7c9f7b26-c19a-49f4-9fdd-7d354a3cb062.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_005104_d23d1886-5929-4796-a6f3-83c7b8e26e96.png"></div>
         <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_003708_a2385a95-19c8-4485-a838-1d20da3edc04.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010643_1d817ae8-3e50-41db-b89f-e6d7ad9a3a8a.png"></div>
         <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_003713_7f6adeff-b0c7-4ced-bf44-5829ccb7fbd9.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010648_bb5fd37c-4705-43c5-a9e9-f4a8038a9046.png"></div>
-        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_003653_12be6f45-08ba-4c0c-899b-5b8e201528f6.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010653_d853b747-d35f-4481-b2a8-a5e50a5a3285.png"></div>
-        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_005954_1985811a-f028-4ef2-8725-c1b5d3231ac5.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_010700_004cdab9-fff5-4efc-9479-6e26376a197e.png"></div>
+        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_024207_f27e7492-c905-446f-874d-38f06796d3d5.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_023808_4899d17d-388c-4e50-9cde-5a4c33047b57.png"></div>
+        <div class="hs" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_024222_757dcf46-99c3-42d8-9258-c3ccdb22ad30.png')" data-m="https://d8j0ntlcm91z4.cloudfront.net/user_3DSL63TGngiexHNYyHPnuPUiRZB/hf_20261017_024216_8ac1210f-e159-4fc9-8e29-8377bd87a821.png"></div>
       </div>
       <video id="v1" muted playsinline preload="auto" crossorigin="anonymous"></video>
       <canvas id="cv" width="1280" height="720"></canvas>
@@ -1521,7 +1521,7 @@ document.addEventListener('visibilitychange',function(){if(document.hidden)stop(
 /* hero story: rotate background + headline every 5s while the hero is on screen */
 (function(){var wrap=document.getElementById('hslides'),h1=document.getElementById('heroH1');if(!wrap||!h1)return;
 var slides=wrap.querySelectorAll('.hs'),sm=document.getElementById('heroSmall'),wd=document.getElementById('heroWord');
-var COPY=[['Your home.','Covered.'],['The things you rely on.','Protected.'],['When something breaks.','One call.'],['Every day. Every hour.','We answer.'],['Coast to coast.','All of America.']];
+var COPY=[['Your home.','Covered.'],['The things you rely on.','Protected.'],['When something breaks.','One call.'],['Every day. Every hour.','We answer.'],['Rated. Awarded. Reviewed.','Trusted.']];
 var mobile=matchMedia('(max-width:767px),(orientation:portrait) and (max-width:1024px)').matches;
 slides.forEach(function(s){var m=s.getAttribute('data-m');if(mobile&&m){s.style.backgroundImage='url("'+m+'")';s.style.backgroundPosition='center bottom'}});
 var dots=document.createElement('div');dots.className='hdots';slides.forEach(function(){dots.appendChild(document.createElement('i'))});document.getElementById('first').appendChild(dots);
