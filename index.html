@@ -850,15 +850,16 @@ table.cmp td.acc{color:#fff;font-weight:400}
  .heroc .cap .live .win .line{line-height:24px}
  .heroc .cap .live .amt{font-size:14.5px!important;color:#fff!important;text-shadow:none!important}
  .heroc .cap .live .tg{font-size:9px!important;margin-left:8px;color:rgba(255,255,255,.72)!important;text-shadow:none!important}.heroc .cap .live .tg em{color:var(--lime)!important}
- .heroc .brcard{display:block!important;width:100%;background:none!important;border:0!important;border-top:1px solid rgba(255,255,255,.16)!important;border-radius:0!important;padding:14px 0 0!important;box-shadow:none!important}
- .heroc .brcard .proof{display:flex!important;align-items:center;justify-content:flex-start;gap:12px;margin:-8px 0 8px!important;color:#fff!important;text-shadow:none!important;flex-basis:auto!important;height:47px}
+ .heroc .brcard{display:block!important;width:100%;background:none!important;border:0!important;border-top:1px solid rgba(255,255,255,.16)!important;border-radius:0!important;padding:12px 0 0!important;box-shadow:none!important}
+ .heroc .brcard .proof{display:flex!important;align-items:center;justify-content:flex-start;gap:12px;margin:0 0 12px!important;color:#fff!important;text-shadow:none!important;flex-basis:auto!important;height:auto!important;min-height:47px;overflow:visible}
  .heroc .brcard .proof .faces{display:flex!important}
  .heroc .brcard .proof .faces .fav{width:44px!important;height:44px!important;margin-left:-13px!important;border-color:#2A0F5E!important;background-size:180%!important}
- .heroc .brcard .proof>div{display:block}
+ .heroc .brcard .proof>div:not(.faces){display:flex;flex-direction:column;justify-content:center;gap:2px;line-height:1}
+ .heroc .brcard .proof .faces{display:flex!important;flex-direction:row!important}
  .heroc .brcard .proof .row{display:flex;align-items:center;gap:6px}
  .heroc .brcard .proof .row b{font-size:22px!important;color:#fff!important}
  .heroc .brcard .proof .st svg{width:17px!important;height:17px!important}
- .heroc .brcard .proof small{display:block;font-size:9px!important;letter-spacing:.12em;color:rgba(255,255,255,.8)!important;margin:3px 0 0!important}
+ .heroc .brcard .proof small{display:block;font-size:9px!important;letter-spacing:.12em;color:rgba(255,255,255,.8)!important;margin:0!important;line-height:1.2}
  .heroc .brcard .proof small::before{content:none}
  .heroc .brcard .cta{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:stretch!important;gap:8px!important;margin:0!important;width:100%}
  .heroc .brcard .cta .pill{flex:1 1 0!important;width:auto!important;height:46px!important;justify-content:center;align-items:center;padding:0 6px!important;font-size:13px!important;letter-spacing:.06em!important;white-space:nowrap;line-height:1}
