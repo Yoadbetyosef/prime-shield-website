@@ -954,6 +954,8 @@ table.cmp td.acc{color:#fff;font-weight:400}
  .trot .aw small,.trot .qt small{display:block;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);margin-top:5px;text-transform:uppercase}
  .trot .qt b{display:block;font-size:14px;font-weight:600;line-height:1.25;font-style:italic;padding:0 6px}
 }
+.zipwrap{position:relative}.zipcity{font-size:12px;color:var(--mk);font-weight:600;margin-top:6px;min-height:16px}
+@media(max-width:767px){.heroc .brcard .cta .pill.b{flex:1 1 100%!important}}
 </style>
 </head>
 <body>
@@ -1032,7 +1034,7 @@ table.cmp td.acc{color:#fff;font-weight:400}
         </div>
         <div class="cta">
           <a class="pill b" href="#apply">Get a Free Quote</a>
-          <a class="pill o" href="#contact">Submit a Claim</a>
+          
           <small>Takes about 2 minutes · No obligation</small>
         </div></div></div>
       </div>
@@ -1196,46 +1198,25 @@ table.cmp td.acc{color:#fff;font-weight:400}
   <div class="modal-bg" data-close></div>
   <div class="modal-card">
     <div class="modal-head">
-      <div><div class="modal-k">Prime Shield Home Warranty</div><div class="modal-t hn">Get your <span class="mk">free quote.</span></div><div class="modal-s hn">About 2 minutes. No payment details. No obligation.</div></div>
+      <div><div class="modal-k">Prime Shield Home Warranty</div><div class="modal-t hn">Get your <span class="mk">free quote.</span></div><div class="modal-s hn">Your ZIP and how to reach you. No payment details. No obligation.</div></div>
       <button class="modal-x" data-close aria-label="Close"><span></span><span></span></button>
     </div>
     <form class="form hn" id="applyForm" novalidate><div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label for="acc_website">Website</label><input id="acc_website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-    <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
     <div class="stage on" data-s="1">
-      <h3>Your home</h3><p class="hint">Enough to price the right plan.</p>
-      <div class="f">
-        <div><label>Type of home</label><div class="opts" data-name="amount"><button type="button">Single-family</button><button type="button">Condo / townhome</button><button type="button">Multi-unit</button><button type="button">Mobile / manufactured</button><button type="button">Not sure yet</button></div></div>
-        <div><label>Square footage</label><div class="opts" data-name="revenue"><button type="button">Under 1,500</button><button type="button">1,500 – 2,500</button><button type="button">2,500 – 4,000</button><button type="button">4,000+</button></div></div>
-        <div><label>Age of the home</label><div class="opts" data-name="tib"><button type="button">Under 10 years</button><button type="button">10 – 25 years</button><button type="button">25 – 50 years</button><button type="button">50+ years</button></div></div>
-      </div>
-      <div class="err" id="err1">Please answer all three questions to continue.</div>
-      <div class="fnav"><span class="fine">Not sure? Pick the closest answer. Nothing here is binding.</span><button type="button" class="pill k" data-next="2">Continue</button></div>
-    </div>
-    <div class="stage" data-s="2">
-      <h3>The plan</h3><p class="hint">What matters most shapes which plan fits.</p>
-      <div class="f">
-        <div><label>Coverage you're looking for</label><div class="opts" data-name="use"><button type="button">Basic Plan</button><button type="button">Total Plan</button><button type="button">Add-ons too</button><button type="button">Not sure yet</button></div></div>
-        <div><label for="industry">I am a</label><select id="industry" name="industry"><option value="">Select one</option><option>Homeowner</option><option>Buying a home</option><option>Selling a home</option><option>Real estate professional</option><option>Landlord / property manager</option><option>Other</option></select></div>
-      </div>
-      <div class="err" id="err2">Please choose a coverage level and who you are to continue.</div>
-      <div class="fnav"><button type="button" class="pill ok" data-prev="1">Back</button><button type="button" class="pill k" data-next="3">Continue</button></div>
-    </div>
-    <div class="stage" data-s="3">
-      <h3>Who we're speaking with</h3><p class="hint">A service representative follows up personally. Choose how.</p>
       <div class="f cols">
-        <div><label for="bname">Property ZIP code</label><input id="bname" name="business" autocomplete="postal-code"></div>
-        <div><label for="pname">Your name</label><input id="pname" name="name" autocomplete="name"></div>
-        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
-        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div><label>Preferred contact</label><div class="opts" data-name="contact"><button type="button">Phone</button><button type="button">Email</button></div></div>
+        <div class="zipwrap" style="grid-column:1/-1"><label for="zip">Home ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="e.g. 08817"><div class="zipcity" id="zipCity" aria-live="polite"></div></div>
+        <div><label for="fname">First name</label><input id="fname" name="fname" autocomplete="given-name"></div>
+        <div><label for="lname">Last name</label><input id="lname" name="lname" autocomplete="family-name"></div>
+        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email"></div>
       </div>
-      <div class="err" id="err3">Please complete all fields with a valid email and phone.</div>
-      <div class="fnav"><button type="button" class="pill ok" data-prev="2">Back</button><div style="text-align:right"><button type="submit" class="pill k" id="applySubmit">Get My Free Quote</button><div class="fine" style="margin-top:10px;max-width:none">By submitting, you agree that Prime Shield Home Warranty may contact you by phone, email, or text about your quote. Message and data rates may apply. You can opt out at any time.</div></div></div>
+      <div class="err" id="err3">Please enter a 5-digit ZIP, your name, a valid phone and email.</div>
+      <div class="fnav" style="display:block"><button type="submit" class="pill k" id="applySubmit" style="width:100%;justify-content:center">Get a Quote</button><div class="fine" style="margin-top:10px;max-width:none">By submitting, you agree that Prime Shield Home Warranty may contact you by phone, email, or text about your quote. Message and data rates may apply. You can opt out at any time.</div></div>
     </div>
     <div class="stage done" data-s="4">
       <div class="okring"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
       <h3>Received.</h3><p class="hint">Here's what happens next.</p>
-      <ol><li>A service representative prepares your quote personally.</li><li>We contact you by <span id="doneContact">your preferred method</span> within one business hour.</li><li>You see the plan, the price and the trade call fee. You decide.</li></ol>
+      <ol><li>A service representative prepares your quote for <span id="doneCity">your home</span>.</li><li>We contact you by phone or email within one business hour.</li><li>You see the plan, the price and the trade call fee. You decide.</li></ol>
       <p class="note">No obligation to purchase. First month free with any single-payment plan.*</p>
     </div>
   </form>
@@ -1387,39 +1368,39 @@ tiles.forEach(function(t,i){t.addEventListener('mouseenter',function(){if(window
 var mc=document.getElementById('mcta'),ap=document.getElementById('apply'),cc=document.getElementById('contact');
 if('IntersectionObserver' in window){var near=false,io=new IntersectionObserver(function(es){near=es.some(function(e){return e.isIntersecting});mc.classList.toggle('off',near||isOpen||window.scrollY<window.innerHeight*.6)},{threshold:.05});if(ap)io.observe(ap);if(cc)io.observe(cc);window.addEventListener('scroll',function(){mc.classList.toggle('off',near||isOpen||window.scrollY<window.innerHeight*.6)},{passive:true});mc.classList.add('off')}})();
 
-/* ---------- Apply form ---------- */
-var form=document.getElementById('applyForm'),data={},stages=form.querySelectorAll('.stage'),prog=form.querySelectorAll('.prog i');
-form.querySelectorAll('.opts').forEach(function(g){g.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){g.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');data[g.dataset.name]=b.textContent})})});
-function go(n){stages.forEach(function(s){s.classList.toggle('on',+s.dataset.s===n)});prog.forEach(function(i,k){i.classList.toggle('on',k<n)});form.querySelectorAll('.err').forEach(function(e){e.style.display='none'});var card=form.closest('.modal-card');if(card)card.scrollTo({top:0,behavior:'smooth'})}
-function valid(n){if(n===1)return data.amount&&data.revenue&&data.tib;if(n===2)return data.use&&form.industry.value;if(n===3)return form.business.value.trim()&&form.name.value.trim()&&/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email.value)&&form.phone.value.replace(/\D/g,'').length>=10&&data.contact;return true}
-form.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){var cur=+b.closest('.stage').dataset.s;if(valid(cur))go(+b.dataset.next);else document.getElementById('err'+cur).style.display='block'})});
-form.querySelectorAll('[data-prev]').forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.prev)})});
-/* ---- send the lead to the Prime Shield CRM (POST /api/intake/lead, consent site-v1) ---- */
+/* ---------- Quote form: ZIP -> city, name, phone, email ---------- */
+var form=document.getElementById('applyForm'),stages=form.querySelectorAll('.stage'),zipEl=document.getElementById('zip'),zipCity=document.getElementById('zipCity'),cityVal='';
+function go(n){stages.forEach(function(s){s.classList.toggle('on',+s.dataset.s===n)});form.querySelectorAll('.err').forEach(function(e){e.style.display='none'});var card=form.closest('.modal-card');if(card)card.scrollTo({top:0,behavior:'smooth'})}
+/* ZIP -> "City, ST" (free lookup; silent if it fails) */
+var zipT=null;zipEl.addEventListener('input',function(){zipEl.value=zipEl.value.replace(/\D/g,'').slice(0,5);cityVal='';zipCity.textContent='';clearTimeout(zipT);
+ if(zipEl.value.length===5){zipCity.textContent='Looking up\u2026';zipT=setTimeout(function(){var z=zipEl.value;
+  fetch('https://api.zippopotam.us/us/'+z).then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||zipEl.value!==z){zipCity.textContent='';return}var pl=j.places&&j.places[0];cityVal=pl?pl['place name']+', '+pl['state abbreviation']:'';zipCity.textContent=cityVal?'\u2713 '+cityVal:''}).catch(function(){zipCity.textContent=''})},250)}});
+function valid(){return /^\d{5}$/.test(form.zip.value)&&form.fname.value.trim()&&form.lname.value.trim()&&/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email.value)&&form.phone.value.replace(/\D/g,'').length>=10}
+/* ---- send the lead to the Prime Shield CRM (POST /api/intake/lead) ---- */
 var INTAKE_URL='' /* [PSHW CRM ENDPOINT REQUIRED] — leave empty to run the form in demo mode */,sending=false,subId=null;
 function uuid(){if(window.crypto&&crypto.randomUUID)return crypto.randomUUID();return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){var r=Math.random()*16|0;return(c==='x'?r:(r&3|8)).toString(16)})}
 function buildLead(){var q=new URLSearchParams(location.search),u={},m={source:'utm_source',medium:'utm_medium',campaign:'utm_campaign',content:'utm_content',term:'utm_term',campaignId:'utm_id'};
  Object.keys(m).forEach(function(k){var v=q.get(m[k]);if(v)u[k]=v.slice(0,200)});
- var p={amount:data.amount,revenue:data.revenue,tib:data.tib,use:data.use,industry:form.industry.value,
-  business:form.business.value.trim(),name:form.name.value.trim(),email:form.email.value.trim(),phone:form.phone.value.trim(),
-  contact:data.contact,consent:true,consentVersion:'site-v1',submissionId:subId,
-  landingPage:location.href.slice(0,1000),submittedAt:new Date().toISOString(),website:form.website.value};
+ var p={zip:form.zip.value,city:cityVal,firstName:form.fname.value.trim(),lastName:form.lname.value.trim(),email:form.email.value.trim(),phone:form.phone.value.trim(),
+  consent:true,consentVersion:'site-v2',submissionId:subId,landingPage:location.href.slice(0,1000),submittedAt:new Date().toISOString(),website:form.website.value};
  if(Object.keys(u).length)p.utm=u; if(document.referrer)p.referrer=document.referrer.slice(0,1000); return p}
 function sendErr(msg){var e=document.getElementById('err3');e.textContent=msg;e.style.display='block'}
+function finish(){var c=document.getElementById('doneCity');if(c)c.textContent=cityVal||('ZIP '+form.zip.value);go(4)}
 form.addEventListener('submit',function(e){e.preventDefault();if(sending)return;
- if(!valid(3)){sendErr('Please complete all fields with a valid email and phone.');return}
+ if(!valid()){sendErr('Please enter a 5-digit ZIP, your name, a valid phone and email.');return}
  var btn=document.getElementById('applySubmit'),label=btn.textContent;
- if(!subId)subId=uuid();                 /* same id on retries, so a lead is never stored twice */
+ if(!subId)subId=uuid();
  sending=true;btn.disabled=true;btn.textContent='Sending\u2026';document.getElementById('err3').style.display='none';
  var done=function(){sending=false;btn.disabled=false;btn.textContent=label};
- if(!INTAKE_URL){setTimeout(function(){done();document.getElementById('doneContact').textContent=(data.contact||'your preferred method').toLowerCase();go(4)},600);return}
+ if(!INTAKE_URL){setTimeout(function(){done();finish()},600);return}
  var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort()},15000);
  fetch(INTAKE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(buildLead()),signal:ctl?ctl.signal:undefined})
  .then(function(r){clearTimeout(t);done();
-   if(r.status===201){document.getElementById('doneContact').textContent=(data.contact||'your preferred method').toLowerCase();subId=null;go(4);return}
+   if(r.status===201){subId=null;finish();return}
    if(r.status===429){sendErr('Too many attempts from this connection. Please wait a few minutes and try again.');return}
    if(r.status===422){sendErr('Some details could not be accepted. Please check your email and phone and try again.');return}
-   sendErr('We could not send your application just now. Please try again in a moment.')})
- .catch(function(){clearTimeout(t);done();sendErr('We could not send your application just now. Please check your connection and try again.')})});
+   sendErr('We could not send your request just now. Please try again in a moment.')})
+ .catch(function(){clearTimeout(t);done();sendErr('We could not send your request just now. Please check your connection and try again.')})});
 })();
 </script>
 <script>
