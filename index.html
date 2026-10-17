@@ -835,7 +835,8 @@ table.cmp td.acc{color:#fff;font-weight:400}
  .scrim,.vdim{display:none!important}
  .heroc{padding:0!important;display:block!important}
  .heroc .title{position:absolute!important;left:30px;right:30px;top:calc(76px + 47%);transform:translateY(calc(-100% - 14px));display:block!important;flex:none!important;container-type:normal!important;min-height:auto!important;text-align:left;z-index:2}
- .heroc .title h1{font-size:min(13.5vw,76px)!important;text-align:left;text-shadow:0 4px 30px rgba(0,0,0,.45)}
+ .heroc .title h1{font-size:min(13.5vw,76px)!important;text-align:left;text-shadow:0 4px 30px rgba(0,0,0,.45);white-space:normal}
+ .heroc .title h1 #heroWord{white-space:normal;word-break:normal}
  .heroc .title h1 small{font-size:min(5.6vw,24px)!important;text-align:left;margin-bottom:4px}
  .heroc .bottom{position:absolute!important;left:20px;right:20px;top:calc(76px + 47% + 18px);bottom:30px;display:flex!important;flex-direction:column!important;justify-content:flex-start;align-items:stretch!important;gap:18px!important}
  .heroc .cap{display:block!important;width:100%}
@@ -851,7 +852,7 @@ table.cmp td.acc{color:#fff;font-weight:400}
  .heroc .cap .live .amt{font-size:14.5px!important;color:#fff!important;text-shadow:none!important}
  .heroc .cap .live .tg{font-size:9px!important;margin-left:8px;color:rgba(255,255,255,.72)!important;text-shadow:none!important}.heroc .cap .live .tg em{color:var(--lime)!important}
  .heroc .brcard{display:block!important;width:100%;background:none!important;border:0!important;border-top:1px solid rgba(255,255,255,.16)!important;border-radius:0!important;padding:12px 0 0!important;box-shadow:none!important}
- .heroc .brcard .proof{display:flex!important;align-items:center;justify-content:flex-start;gap:12px;margin:0 0 12px!important;color:#fff!important;text-shadow:none!important;flex-basis:auto!important;height:auto!important;min-height:47px;overflow:visible}
+ .heroc .brcard .proof{display:flex!important;align-items:center;justify-content:center;gap:12px;margin:0 0 12px!important;color:#fff!important;text-shadow:none!important;flex-basis:auto!important;height:auto!important;min-height:47px;overflow:visible}
  .heroc .brcard .proof .faces{display:flex!important}
  .heroc .brcard .proof .faces .fav{width:44px!important;height:44px!important;margin-left:-13px!important;border-color:#2A0F5E!important;background-size:180%!important}
  .heroc .brcard .proof>div:not(.faces){display:flex;flex-direction:column;justify-content:center;gap:2px;line-height:1}
@@ -1526,7 +1527,7 @@ slides.forEach(function(s){var m=s.getAttribute('data-m');if(mobile&&m){s.style.
 var dots=document.createElement('div');dots.className='hdots';slides.forEach(function(){dots.appendChild(document.createElement('i'))});document.getElementById('first').appendChild(dots);
 var i=0,timer=null,running=false,DUR=5000;
 function show(k){i=k;slides.forEach(function(s,n){s.classList.toggle('on',n===k)});dots.querySelectorAll('i').forEach(function(d,n){d.classList.remove('on');void d.offsetWidth;if(n===k)d.classList.add('on')});
- h1.classList.add('sw');setTimeout(function(){sm.textContent=COPY[k][0];wd.textContent=COPY[k][1];var L=COPY[k][1].length;wd.style.fontSize=L>8?(Math.round(800/L))+'%':'';h1.classList.remove('sw')},500)}
+ h1.classList.add('sw');setTimeout(function(){sm.textContent=COPY[k][0];wd.textContent=COPY[k][1];var L=COPY[k][1].length;wd.style.fontSize=(!mobile&&L>8)?(Math.round(800/L))+'%':'';h1.classList.remove('sw')},500)}
 function next(){show((i+1)%slides.length);timer=setTimeout(next,DUR)}
 function start(){if(running)return;running=true;dots.querySelectorAll('i')[i].classList.add('on');timer=setTimeout(next,DUR)}
 function stop(){running=false;clearTimeout(timer)}
