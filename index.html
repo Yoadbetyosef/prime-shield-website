@@ -826,27 +826,48 @@ table.cmp td.acc{color:#fff;font-weight:400}
 .heroc .brcard .pill.o:hover{border-color:#111!important;background:rgba(17,17,17,.06)!important}
 .heroc .brcard .proof .faces .fav{border-color:#fff!important}
 @media(max-width:767px){.heroc .brcard{background:none!important;border-radius:0!important;padding:0!important;box-shadow:none!important}}
-/* ===== MOBILE HERO, "Pure": centered title top, image, one lime button + rating line at the bottom ===== */
+/* ===== MOBILE HERO, layout A: framed photo on top (title inside), structured panel below ===== */
 @media(max-width:767px){
- .heroc{padding:118px 22px 36px!important}
- .heroc .bottom,.heroc .cap,.heroc .brcard{display:contents!important}
- .heroc .claims,.heroc .cap .live{display:none!important}
- .heroc .title{order:1;flex:0 0 auto!important;display:block!important;container-type:normal!important;min-height:auto!important;text-align:center;padding:0}
- .heroc .title h1{font-size:min(17vw,100px)!important;text-align:center;text-shadow:0 4px 30px rgba(0,0,0,.4)}
- .heroc .title h1 small{font-size:min(6vw,28px)!important;text-align:center;margin-bottom:6px}
- .heroc .brcard .cta{order:3;display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;margin-top:auto!important;width:100%}
- .heroc .brcard .cta .pill.b{width:100%!important;flex:none!important;padding:18px 12px!important;font-size:11px!important}
- .heroc .brcard .cta .pill.o,.heroc .brcard .cta small{display:none!important}
- .heroc .brcard .proof{order:4!important;flex-basis:auto!important;display:flex!important;align-items:center;justify-content:center;gap:8px;margin:14px 0 0!important;color:#fff!important;text-shadow:0 1px 10px rgba(0,0,0,.45)!important}
- .heroc .brcard .proof .faces{display:none!important}
- .heroc .brcard .proof>div{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
+ .hero .pin{background:#5B21B6!important}
+ .hslides{position:absolute!important;inset:auto!important;top:76px;left:14px;right:14px;height:47%;border-radius:20px;overflow:hidden;z-index:0}
+ .hs{background-position:center 60%!important}
+ .hslides::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,11,75,0) 35%,rgba(30,11,75,.82) 100%);pointer-events:none}
+ .scrim,.vdim{display:none!important}
+ .heroc{padding:0!important;display:block!important}
+ .heroc .title{position:absolute!important;left:30px;right:30px;top:calc(76px + 47%);transform:translateY(calc(-100% - 14px));display:block!important;flex:none!important;container-type:normal!important;min-height:auto!important;text-align:left;z-index:2}
+ .heroc .title h1{font-size:min(13.5vw,76px)!important;text-align:left;text-shadow:0 4px 30px rgba(0,0,0,.45)}
+ .heroc .title h1 small{font-size:min(5.6vw,24px)!important;text-align:left;margin-bottom:4px}
+ .heroc .bottom{position:absolute!important;left:20px;right:20px;top:calc(76px + 47% + 18px);bottom:30px;display:flex!important;flex-direction:column!important;justify-content:flex-start;align-items:stretch!important;gap:18px!important}
+ .heroc .cap{display:block!important;width:100%}
+ .heroc .claims{display:flex!important;flex-direction:column!important;gap:9px!important;margin:0!important;align-items:flex-start}
+ .heroc .claims .ci{display:flex!important;align-items:center;gap:9px;margin:0!important}
+ .heroc .claims .ci b{font-size:14.5px!important;color:#fff!important;text-shadow:none!important;line-height:1}
+ .heroc .claims .ci span{display:inline!important;font-size:9px!important;letter-spacing:.12em;color:rgba(255,255,255,.72)!important;text-shadow:none!important}
+ .heroc .claims .ci::before{width:17px!important;height:17px!important;background-size:10px!important}
+ .heroc .cap .live{display:flex!important;align-items:center;gap:9px;margin:9px 0 0!important}
+ .heroc .cap .live .jf{width:17px;height:17px;border-color:var(--lime)}.heroc .cap .live .jf .dot{background:var(--lime)}
+ .heroc .cap .live .win{width:calc(100vw - 70px);max-width:none;height:18px}
+ .heroc .cap .live .amt{font-size:14.5px!important;color:#fff!important;text-shadow:none!important}
+ .heroc .cap .live .tg{font-size:9px!important;margin-left:8px;color:rgba(255,255,255,.72)!important;text-shadow:none!important}.heroc .cap .live .tg em{color:var(--lime)!important}
+ .heroc .brcard{display:block!important;width:100%;background:none!important;border:0!important;border-top:1px solid rgba(255,255,255,.16)!important;border-radius:0!important;padding:14px 0 0!important;box-shadow:none!important}
+ .heroc .brcard .proof{display:flex!important;align-items:center;justify-content:flex-start;gap:10px;margin:0 0 14px!important;color:#fff!important;text-shadow:none!important;flex-basis:auto!important}
+ .heroc .brcard .proof .faces{display:flex!important}
+ .heroc .brcard .proof .faces .fav{width:30px!important;height:30px!important;margin-left:-9px!important;border-color:#2A0F5E!important}
+ .heroc .brcard .proof>div{display:block}
  .heroc .brcard .proof .row{display:flex;align-items:center;gap:6px}
- .heroc .brcard .proof .row b{font-size:13px!important;color:#fff!important}
- .heroc .brcard .proof .st svg{width:12px!important;height:12px!important}
- .heroc .brcard .proof small{font-size:9px!important;letter-spacing:.12em;color:rgba(255,255,255,.85)!important;margin:0!important}
- .heroc .brcard .proof small::before{content:"\00B7  ";opacity:.6}
- .hdots{bottom:max(10px,env(safe-area-inset-bottom,0px))}
+ .heroc .brcard .proof .row b{font-size:16px!important;color:#fff!important}
+ .heroc .brcard .proof .st svg{width:13px!important;height:13px!important}
+ .heroc .brcard .proof small{display:block;font-size:9px!important;letter-spacing:.12em;color:rgba(255,255,255,.8)!important;margin:3px 0 0!important}
+ .heroc .brcard .proof small::before{content:none}
+ .heroc .brcard .cta{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:stretch!important;gap:8px!important;margin:0!important;width:100%}
+ .heroc .brcard .cta .pill{flex:1 1 0!important;width:auto!important;justify-content:center;padding:16px 8px!important;font-size:10.5px!important;letter-spacing:.1em!important;white-space:nowrap}
+ .heroc .brcard .cta .pill.b{flex:1.45 1 0!important;display:flex!important}
+ .heroc .brcard .cta .pill.o{display:flex!important;border:1.5px solid rgba(255,255,255,.8)!important;background:none!important;color:#fff!important;text-decoration:none}
+ .heroc .brcard .cta .pill.b::after{content:none}
+ .heroc .brcard .cta small{display:none!important}
+ .hdots{bottom:max(9px,env(safe-area-inset-bottom,0px))}
 }
+
 
 
 .heroc .cap .live .jf{border-color:var(--lime)}.heroc .cap .live .jf .dot{background:var(--lime)}
